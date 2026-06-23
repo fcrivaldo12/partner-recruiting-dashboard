@@ -474,32 +474,25 @@ tr.dr:hover .row-acts{opacity:1;}
 <div class="toast" id="toast"></div>
 <script>
 /* ─ SEED DATA ─ */
-const SP=[
-  {id:'p1',company:'섹타나인',partnerType:'PE Sell',firstContact:'2026-03-12',notes:'',source:'Inbound',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'민성재 파트너님이 연락 예정',dueDate:'',remarks:''},
-  {id:'p2',company:'KG ICT',partnerType:'PE Sell',firstContact:'2026-03-17',notes:'',source:'Inbound',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'검토 여부 확인',dueDate:'2026-03-31',remarks:''},
-  {id:'p3',company:'소프트원',partnerType:'PE Sell',firstContact:'2026-02-11',notes:'',source:'Outbound',stage:'Dropped',prob:0,expectedSign:'',nextAction:'',dueDate:'',remarks:'유지보수에만 관심있는듯'},
-  {id:'p4',company:'CJ 올리브 네트웍스',partnerType:'PE Sell',firstContact:'2026-02-11',notes:'',source:'Inbound',stage:'4-Evaluating',prob:60,expectedSign:'2026-05-31',nextAction:'DD',dueDate:'2026-04-03',remarks:''},
-  {id:'p5',company:'소르테크',partnerType:'PE Sell',firstContact:'2025-12-11',notes:'',source:'Inbound',stage:'3-Interested',prob:40,expectedSign:'',nextAction:'가입 관련 상황 파악',dueDate:'2026-04-03',remarks:''},
-  {id:'p6',company:'유니포스트',partnerType:'PE Sell',firstContact:'2026-02-24',notes:'',source:'Outbound',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'내부 검토 상황 파악',dueDate:'2026-04-03',remarks:'Build or Sell'},
-  {id:'p7',company:'OriginN',partnerType:'PE Sell',firstContact:'',notes:'',source:'Inbound',stage:'5-Committed',prob:90,expectedSign:'2026-04-30',nextAction:'계약서 나감',dueDate:'',remarks:'Origin Consulting 분사'},
-  {id:'p8',company:'BMTech',partnerType:'PE Sell',firstContact:'2026-06-02',notes:'',source:'Inbound',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'다시 가입할건지 문의',dueDate:'',remarks:''},
-  {id:'p9',company:'ATLAS DX Co.,Ltd.',partnerType:'PE Sell',firstContact:'2026-06-01',notes:'',source:'Outbound',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'가입 신청서 보고 연락',dueDate:'',remarks:''},
-  {id:'p10',company:'Sharedone',partnerType:'PE Sell',firstContact:'2026-06-01',notes:'',source:'',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'',dueDate:'',remarks:''},
-  {id:'p11',company:'ITMORE',partnerType:'PE Sell',firstContact:'2026-05-28',notes:'',source:'',stage:'1-Identified',prob:10,expectedSign:'',nextAction:'',dueDate:'',remarks:''},
-];
-const SA=[
-  {id:'a1',company:'KG ICT',action:'검토 여부 확인',dueDate:'2026-03-31',stage:'1-Identified',priority:'urgent'},
-  {id:'a2',company:'CJ 올리브 네트웍스',action:'DD (Due Diligence)',dueDate:'2026-04-03',stage:'4-Evaluating',priority:'urgent'},
-  {id:'a3',company:'소르테크',action:'가입 관련 상황 파악',dueDate:'2026-04-03',stage:'3-Interested',priority:'high'},
-  {id:'a4',company:'유니포스트',action:'내부 검토 상황 파악',dueDate:'2026-04-03',stage:'1-Identified',priority:'high'},
-];
+
+let PP = [];
+let PA = [];
+
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    PP = data.partners;
+    PA = data.actions;
+
+    refreshAll();
+  });
+
 
 /* ─ STORAGE ─ */
 const KP='ekx_v11_p',KA='ekx_v11_a';
 const lload=(k,s)=>{const d=localStorage.getItem(k);return d?JSON.parse(d):s.map(x=>({...x}));};
 const lsave=(k,d)=>{localStorage.setItem(k,JSON.stringify(d));stamp();};
 const stamp=()=>{const n=new Date();localStorage.setItem('ekx_v11_ts',n.toLocaleString('ko-KR'));ge('lastUpdated').textContent=localStorage.getItem('ekx_v11_ts')||'—';};
-let PP=lload(KP,SP),PA=lload(KA,SA);
 const uid=()=>Math.random().toString(36).slice(2,9);
 const ge=id=>document.getElementById(id);
 const gv=id=>ge(id).value.trim();
@@ -985,7 +978,6 @@ function delAction(id){if(!confirm('Delete this action?'))return;PA=PA.filter(a=
 const today=new Date();
 ge('todayDate').textContent=today.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'});
 ge('lastUpdated').textContent=localStorage.getItem('ekx_v11_ts')||'Original data';
-refreshAll();
 </script>
 </body>
 </html>
