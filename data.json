@@ -1,0 +1,28 @@
+
+{
+  "partners": [
+    {"id":"p1","company":"섹타나인","partnerType":"PE Sell","firstContact":"2026-03-12","notes":"민성재 파트너님께 확인했으나 파트너쉽 관련 검토 없음","source":"Inbound","stage":"Dropped","prob":0,"expectedSign":"","nextAction":"","dueDate":"","remarks":""},
+    {"id":"p2","company":"KG ICT","partnerType":"PE Sell","firstContact":"2026-03-17","notes":"올해는 당사 내부 MA 전환을 우선 진행하고,   SAP 파트너사 자격 신청은 내년에 추진할 예정이니, 참고바랍니다.","source":"Inbound","stage":"2-Introduced","prob":10,"expectedSign":"","nextAction":"검토 여부 확인","dueDate":"2026-06-11","remarks":""},
+    {"id":"p3","company":"소프트원","partnerType":"PE Sell","firstContact":"2026-02-11","notes":"","source":"Outbound","stage":"Dropped","prob":0,"expectedSign":"","nextAction":"","dueDate":"","remarks":"유지보수에만 관심있는듯"},
+    {"id":"p4","company":"CJ 올리브 네트웍스","partnerType":"PE Sell","firstContact":"2026-02-11","notes":"DD 진행 상황 daily로 체크 중","source":"Inbound","stage":"5-Committed","prob":80,"expectedSign":"2026-06-26","nextAction":"DD status check","dueDate":"2026-06-11","remarks":""},
+    {"id":"p5","company":"소르테크","partnerType":"PE Sell","firstContact":"2025-12-11","notes":"","source":"Inbound","stage":"3-Interested","prob":40,"expectedSign":"","nextAction":"가입 관련 상황 파악","dueDate":"2026-06-11","remarks":""},
+    {"id":"p6","company":"유니포스트","partnerType":"PE Sell","firstContact":"2026-02-24","notes":"","source":"Outbound","stage":"2-Introduced","prob":20,"expectedSign":"","nextAction":"내부 검토 상황 파악","dueDate":"2026-04-03","remarks":"Build or Sell"},
+    {"id":"p7","company":"OriginN","partnerType":"PE Sell","firstContact":"","notes":"가입 완료","source":"Inbound","stage":"6-Signed","prob":100,"expectedSign":"2026-04-30","nextAction":"계약서 나감","dueDate":"","remarks":"Origin Consulting 분사"},
+    {"id":"p8","company":"BMTech","partnerType":"PE Sell","firstContact":"2026-06-02","notes":"","source":"Inbound","stage":"3-Interested","prob":50,"expectedSign":"","nextAction":"다시 가입할건지 문의","dueDate":"","remarks":""},
+    {"id":"p9","company":"ATLAS DX Co.,Ltd.","partnerType":"PE Sell","firstContact":"2026-06-01","notes":"메일 회신이 없어 리마인드 메일 보냄","source":"Outbound","stage":"1-Identified","prob":10,"expectedSign":"","nextAction":"초기 미팅 진행","dueDate":"2026-06-19","remarks":""},
+    {"id":"p10","company":"Sharedone","partnerType":"PE Sell","firstContact":"2026-06-01","notes":"사업 방향이나 규모로 봤을 때 당장 가입은 어려워 보임","source":"Outbound","stage":"2-Introduced","prob":10,"expectedSign":"","nextAction":"","dueDate":"","remarks":""},
+    {"id":"p11","company":"ITMORE","partnerType":"PE Sell","firstContact":"2026-05-28","notes":"사업 방향이나 규모로 봤을 때 당장 가입은 어려워 보임","source":"Outbound","stage":"2-Introduced","prob":10,"expectedSign":"","nextAction":"","dueDate":"","remarks":""},
+    {"id":"pchw7u1f","company":"티에이파트너스","partnerType":"PE Service","firstContact":"2026-05-21","notes":"자격증 준비 중","source":"Inbound","stage":"2-Introduced","prob":20,"expectedSign":"","nextAction":"","dueDate":"","remarks":""},
+    {"id":"pfjgf2oz","company":"프로니스정보기술","partnerType":"PE Build","firstContact":"2026-06-09","notes":"뱅킨 시스템 개발사.","source":"Inbound","stage":"2-Introduced","prob":10,"expectedSign":"","nextAction":"","dueDate":"","remarks":""},
+    {"id":"pdmvqato","company":"SPRONEXT","partnerType":"PE Sell","firstContact":"2026-06-10","notes":"","source":"Inbound","stage":"","prob":10,"expectedSign":"","nextAction":"초기 미팅","dueDate":"2026-06-18","remarks":""},
+    {"id":"pjqtx62s","company":"주식회사 트루본","partnerType":"PE Sell","firstContact":"2026-06-05","notes":"","source":"Inbound","stage":"1-Identified","prob":"","expectedSign":"","nextAction":"리마인드 메일 보내기","dueDate":"2026-06-17","remarks":""},
+    {"id":"pfzzyh1g","company":"{주}대림","partnerType":"PE Sell","firstContact":"2026-02-09","notes":"","source":"Inbound","stage":"3-Interested","prob":50,"expectedSign":"2026-09-25","nextAction":"비지니스 플랜 피드백 반영 여부","dueDate":"2026-06-11","remarks":""},
+    {"id":"pxz8ct3h","company":"SEPPIN","partnerType":"PE Service","firstContact":"2026-06-16","notes":"이미 Sell 파트너이나 Service 파트너를 요구하는 고객사가 늘어남에 따라 추가로 가입을 원함","source":"Inbound","stage":"5-Committed","prob":90,"expectedSign":"","nextAction":"","dueDate":"","remarks":""}
+  ],
+  "actions": [
+    {"id":"a1","company":"KG ICT","action":"검토 여부 확인","dueDate":"2026-06-11","stage":"1-Identified","priority":"urgent"},
+    {"id":"a2","company":"CJ 올리브 네트웍스","action":"DD (Due Diligence)","dueDate":"2026-06-11","stage":"4-Evaluating","priority":"urgent"},
+    {"id":"a3","company":"소르테크","action":"가입 관련 상황 파악","dueDate":"2026-06-11","stage":"3-Interested","priority":"high"},
+    {"id":"a4","company":"유니포스트","action":"내부 검토 상황 파악","dueDate":"2026-04-03","stage":"1-Identified","priority":"high"}
+  ]
+}
